@@ -5,16 +5,22 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: eliu <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/03 15:14:27 by eliu              #+#    #+#             */
-/*   Updated: 2016/11/16 02:49:12 by eliu             ###   ########.fr       */
+/*   Created: 2019/10/27 14:35:28 by eliu              #+#    #+#             */
+/*   Updated: 2019/10/27 14:38:02 by eliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*
+**	The strnlen functions returns
+**	The same result as strlen(), or maxlen,
+**	Whichever is smaller
+*/
+
 size_t	ft_strlen(const char *s)
 {
-	size_t i;
+	size_t	i;
 
 	i = 0;
 	while (s[i])

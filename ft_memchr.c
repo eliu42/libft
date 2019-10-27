@@ -5,23 +5,28 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: eliu <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/07 20:30:46 by eliu              #+#    #+#             */
-/*   Updated: 2016/11/10 18:08:30 by eliu             ###   ########.fr       */
+/*   Created: 2019/10/27 14:27:57 by eliu              #+#    #+#             */
+/*   Updated: 2019/10/27 14:31:07 by eliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*
+**	Locates the first occurence of `c` (converted to an unsigned char
+**	in string `s` within `n` bytes.
+*/
+
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	unsigned char *cur;
+	size_t	i;
 
-	cur = (unsigned char*)s;
-	while (n--)
+	i = 0;
+	while (i < n)
 	{
-		if (*cur == (unsigned char)(c))
-			return (cur);
-		cur++;
+		if ((unsigned char)s[i] == (unsigned char)c)
+			return (s + i);
+		i++;
 	}
 	return (NULL);
 }

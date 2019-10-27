@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: eliu <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/04 00:23:42 by eliu              #+#    #+#             */
-/*   Updated: 2016/11/16 02:13:06 by eliu             ###   ########.fr       */
+/*   Created: 2019/10/27 13:16:25 by eliu              #+#    #+#             */
+/*   Updated: 2019/10/27 13:18:30 by eliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,13 @@
 
 void	*ft_memset(void *b, int c, size_t len)
 {
-	char		*str;
-	size_t		i;
+	size_t	i;
 
 	i = 0;
-	str = b;
 	while (i < len)
-		*(str + i++) = c;
-	return (b);
+	{
+		*b = (unsigned char)c;
+		i++;
+	}
+	return ;
 }

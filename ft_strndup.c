@@ -5,28 +5,31 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: eliu <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/07 01:15:59 by eliu              #+#    #+#             */
-/*   Updated: 2016/11/14 02:15:07 by eliu             ###   ########.fr       */
+/*   Created: 2019/10/27 14:46:43 by eliu              #+#    #+#             */
+/*   Updated: 2019/10/27 15:03:21 by eliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*
+**	Copies at most `n` characters from s1, always null terminating.
+*/
+	
 char	*ft_strndup(const char *s1, size_t n)
 {
-	char	*str;
 	size_t	i;
+	size_t	len;
+	char	*new;
 
+	len = ft_strlen(s1);
+	new = (char*)malloc(sizeof(char) * (len + 1));
 	i = 0;
-	str = (char*)malloc(sizeof(char) * (n + 1));
-	if (str == NULL)
-		return (NULL);
-	while (s1[i] && n)
+	while (i < n)
 	{
-		str[i] = s1[i];
+		new[i] = s1[i];
 		i++;
-		n--;
 	}
-	str[i] = '\0';
-	return (str);
+	new[i] = '\0';
+	return (new);
 }

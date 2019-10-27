@@ -5,14 +5,18 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: eliu <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/07 21:35:15 by eliu              #+#    #+#             */
-/*   Updated: 2016/11/16 02:23:28 by eliu             ###   ########.fr       */
+/*   Created: 2019/10/27 14:38:07 by eliu              #+#    #+#             */
+/*   Updated: 2019/10/27 14:39:48 by eliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strnlen(const char *s, size_t maxlen)
+/*
+**	Computes the length of `s`, not more than `maxlen` chars. 
+*/
+
+size_t ft_strnlen(const char *s, size_t maxlen)
 {
 	size_t i;
 

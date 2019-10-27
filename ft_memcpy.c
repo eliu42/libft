@@ -5,28 +5,28 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: eliu <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/04 14:55:05 by eliu              #+#    #+#             */
-/*   Updated: 2016/11/07 00:05:00 by eliu             ###   ########.fr       */
+/*   Created: 2019/10/27 13:52:53 by eliu              #+#    #+#             */
+/*   Updated: 2019/10/27 14:27:45 by eliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** check later if (n == 0 || dst = src) if true,  return (s1)
-**  also check if we need to assign a second pointer (*source) or can use src
+**	Copies at most n bytes from src to dst.
+**	Returns the original value of dst.
 */
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+void	*ft_memcpy(void *dst, void *src, size_t n)
 {
-	unsigned char *dest;
-	unsigned char *source;
+	int i = 0;
 
-	if (dst == src | n == 0)
-		return (dst);
-	dest = (unsigned char*)dst;
-	source = (unsigned char*)src;
-	while (n--)
-		*dest++ = *source++;
+	if (!dst || !src)
+		return (NULL);
+	while (i < n)
+	{
+		dst[i] = src[i];
+		i++;
+	}
 	return (dst);
 }

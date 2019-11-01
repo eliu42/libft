@@ -1,35 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncat.c                                       :+:      :+:    :+:   */
+/*   ft_strequ.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eliu <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/27 15:16:11 by eliu              #+#    #+#             */
-/*   Updated: 2019/10/31 17:51:21 by eliu             ###   ########.fr       */
+/*   Created: 2019/10/31 15:16:20 by eliu              #+#    #+#             */
+/*   Updated: 2019/10/31 15:18:47 by eliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-**	Append a copy of the null terminated string s2 to the end of the null-
-**	terminted string s1, then add a terminating '\0'. The string s1 must have
-**	sufficient space to hold the result.
+**	Lexicographical comparison between s1 and s2. If the 2 strings are
+**	identical the function returns 1, or 0 otherwise.
 */
 
-char	*ft_strncat(char *s1, const char *s2, size_t n)
+int	ft_strequ(char const *s1, char const *s2)
 {
-	size_t	i;
-
-	i = 0;
-	while (str[i])
-		i++;
-	while (i < n)
+	while (s1 && s2)
 	{
-		s1[i] = s2[i];
-		i++;
+		if (*s1 != *s2)
+			return (0);
+		s1++;
+		s2++;
 	}
-	s[i] = '\0';
-	return (s1);
+	return (1);
 }

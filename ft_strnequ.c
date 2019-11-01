@@ -1,35 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncat.c                                       :+:      :+:    :+:   */
+/*   ft_strnequ.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eliu <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/27 15:16:11 by eliu              #+#    #+#             */
-/*   Updated: 2019/10/31 17:51:21 by eliu             ###   ########.fr       */
+/*   Created: 2019/10/31 15:18:57 by eliu              #+#    #+#             */
+/*   Updated: 2019/10/31 15:20:34 by eliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*
-**	Append a copy of the null terminated string s2 to the end of the null-
-**	terminted string s1, then add a terminating '\0'. The string s1 must have
-**	sufficient space to hold the result.
-*/
-
-char	*ft_strncat(char *s1, const char *s2, size_t n)
+int		ft_strnequ(char const *s1, char const *s2, size_t n)
 {
-	size_t	i;
-
-	i = 0;
-	while (str[i])
-		i++;
-	while (i < n)
+	while (n)
 	{
-		s1[i] = s2[i];
-		i++;
+		if (*s1 != *s2)
+			return (0);
+		s1++;
+		s2++;
+		n--;
 	}
-	s[i] = '\0';
-	return (s1);
+	return (1);
 }

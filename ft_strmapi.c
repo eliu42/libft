@@ -1,35 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncat.c                                       :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eliu <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/27 15:16:11 by eliu              #+#    #+#             */
-/*   Updated: 2019/10/31 17:51:21 by eliu             ###   ########.fr       */
+/*   Created: 2019/10/31 15:13:46 by eliu              #+#    #+#             */
+/*   Updated: 2019/10/31 15:16:13 by eliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-**	Append a copy of the null terminated string s2 to the end of the null-
-**	terminted string s1, then add a terminating '\0'. The string s1 must have
-**	sufficient space to hold the result.
+**	Applies the function f to each character of the string passed as argument
+**	by giving its index as first argument to create a "fresh" new string.
+**	resulting from the successive applications of f. Param1 = the string
+**	to map. Param2 = the function to apply to each character of s and its
+**	index.
 */
 
-char	*ft_strncat(char *s1, const char *s2, size_t n)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	size_t	i;
-
-	i = 0;
-	while (str[i])
-		i++;
-	while (i < n)
-	{
-		s1[i] = s2[i];
-		i++;
-	}
-	s[i] = '\0';
-	return (s1);
+	return (NULL);
 }

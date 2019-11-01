@@ -1,35 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncat.c                                       :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eliu <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/27 15:16:11 by eliu              #+#    #+#             */
-/*   Updated: 2019/10/31 17:51:21 by eliu             ###   ########.fr       */
+/*   Created: 2019/10/31 17:31:24 by eliu              #+#    #+#             */
+/*   Updated: 2019/10/31 17:34:40 by eliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-**	Append a copy of the null terminated string s2 to the end of the null-
-**	terminted string s1, then add a terminating '\0'. The string s1 must have
-**	sufficient space to hold the result.
+**	Iterates a list lst and applies the function f to each link to create a "fresh" list resulting from the successive applications of f.If the allocation
+**	fails, the function returns NULL.
 */
 
-char	*ft_strncat(char *s1, const char *s2, size_t n)
+t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 {
-	size_t	i;
-
-	i = 0;
-	while (str[i])
-		i++;
-	while (i < n)
+	while (lst)
 	{
-		s1[i] = s2[i];
-		i++;
+		lst = f(lst);
+		lst = lst->next;
 	}
-	s[i] = '\0';
-	return (s1);
+	return (lst);
 }

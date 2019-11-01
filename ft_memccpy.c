@@ -6,7 +6,7 @@
 /*   By: eliu <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/27 14:22:13 by eliu              #+#    #+#             */
-/*   Updated: 2019/10/27 14:26:48 by eliu             ###   ########.fr       */
+/*   Updated: 2019/10/31 17:39:42 by eliu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 /*
 **	Copies at most `n` bytes from src to dst
-**	If a character `c` is found,
+**	If a character `c` is found, copying stops, and
 **	A pointer to the character after C is returned.
 **	Otherwise copies all and returns NULL.
 */
